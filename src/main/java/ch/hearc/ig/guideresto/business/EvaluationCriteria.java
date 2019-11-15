@@ -1,10 +1,24 @@
 package ch.hearc.ig.guideresto.business;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="CRITERES_EVALUATION")
 public class EvaluationCriteria {
-    
+
+    @Id
+    @Column(name="numero")
     private Integer id;
+
+    @Column(name="nom")
     private String name;
+
+    @Column(name="description")
     private String description;
+
 
     public EvaluationCriteria() {
         this(null, null);
